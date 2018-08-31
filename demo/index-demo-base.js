@@ -1,10 +1,12 @@
 
 import { Con, Row, Col } from 'bee-layout';
 import { Panel } from 'bee-panel';
-import Button from 'bee-button';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import SearchPanel from '../src';
+import Button from 'bee-button';
+import './demo.scss';
+
+
 
 
 const CARET = <i className="uf uf-arrow-down"></i>;
@@ -41,7 +43,7 @@ class Demo extends Component {
             <Col md={12} >
                 <h3>{ title }</h3>
                 <p>{ desc }</p>
-                <Panel collapsible headerContent expanded={ this.state.open } colors='bordered' header={ example } footer={footer} footerStyle = {{padding: 0}}>
+                <Panel collapsible expanded={ this.state.open } colors='bordered' header={ example } footer={footer} footerStyle = {{padding: 0}}>
                     <pre><code className="hljs javascript">{ code }</code></pre>
                 </Panel>
             </Col>

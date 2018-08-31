@@ -3,7 +3,7 @@ import {Panel} from 'bee-panel';
 import Button from 'bee-button';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-
+import './SearchPanel.scss'
 const propTypes = {
     searchOpen:PropTypes.bool,
     showIcon:PropTypes.bool,
