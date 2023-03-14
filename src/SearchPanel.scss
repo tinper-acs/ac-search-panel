@@ -1,70 +1,171 @@
-$labelWidth:80px;
-$itemWidth:calc(100% - 90px);
+$itemWidth: calc(100% - 90px);
+
 .u-search {
-    .u-label {
-        min-width: $labelWidth;
-        white-space: nowrap;
-        text-align: right;
+  background: #F7F9FB;
+
+  &-header {
+    color: #424242;
+    overflow: hidden;
+    height: 48px;
+    padding: 11px 24px;
+
+    &>a {
+      overflow: hidden;
     }
-    .u-checkbox-group,
-    .col {
-        display: inline-flex;
+  }
+
+  &-header-title {
+    float: left;
+    color: #434A54;
+    line-height: 26px;
+    font-size: 14px;
+    font-weight: 500;
+
+    &>i {
+      font-weight: 600;
     }
-    .u-form-item {
-        min-height: 42px;
-        .u-select {
-            width: $itemWidth;
+  }
+
+  &-header-oper {
+    float: right;
+    vertical-align: center;
+    line-height: 0;
+
+    .header-oper-btn {
+      display: inline-block;
+      width: 64px;
+      height: 26px;
+      text-align: center;
+      font-size: 12px;
+      line-height: 26px;
+      border-radius: 3px;
+      margin-left: 8px;
+      cursor: pointer;
+      vertical-align: middle;
+
+      &:hover {
+        background: #EBECF0;
+      }
+
+      &>i {
+        font-size: 12px;
+        padding-right: 0;
+      }
+
+      &.primary {
+        background: #5E6C84;
+        color: #ffffff;
+
+        &:hover {
+          background: #344563;
         }
-        .u-form-control {
-            width: $itemWidth;
-        }
-        .datepicker-container{
-            height: 26px;
-            width: $itemWidth;
-            .u-form-control.md{
-                height: 26px;
-            }
-            .u-form-control{
-                width: 100%;
-            }
-            .u-input-group-btn{
-                top:0;
-            }
-        }
-        .bottom-10{
-            position: relative;
-            bottom: 10px;
-        }
-        .calendar-picker{
-            height: 26px;
-            width: $itemWidth;
-            .u-form-control.md{
-                height: 26px;
-            }
-            .u-form-control{
-                width: 100%;
-            }
-            .u-input-group-btn{
-                top:0;
-            }
-        }
-        .u-switch{
-            display: inline-block;
-        }
+      }
     }
-    .u-form-item,
-    .u-row>div {
-        padding: 0;
+  }
+
+  &-resident {
+    padding: 0 24px 10px;
+  }
+
+  .u-panel {
+    border-radius: 0;
+    border: none;
+    margin-bottom: 0;
+    background: transparent;
+    box-shadow: none;
+    padding-top: 0px;
+    padding-bottom: 0;
+
+    .u-panel-heading {
+      height: 48px;
+      padding: 11px 24px;
+      border: none;
+      background: transparent;
     }
-    .u-panel {
-        padding-top: 0px;
-        padding-bottom: 0;
-        .u-panel-body {
-            padding-bottom: 0
-        }
+
+    .u-panel-body {
+      background: transparent;
+      padding: 0 24px 0;
     }
-    .u-search-resident {
-        padding-bottom: 0px;
-        padding-top: 0px;
+
+    .u-panel-collapse.collapsing {
+      width: 100%;
     }
+  }
+
+  .u-label {
+    min-width: 80px;
+    white-space: nowrap;
+    text-align: right;
+  }
+
+  .u-checkbox-group,
+  .col {
+    display: inline-flex;
+  }
+
+  .u-form-item {
+    min-height: 42px;
+
+    .u-select {
+      width: $itemWidth;
+    }
+
+    .u-form-control {
+      width: $itemWidth;
+    }
+
+    .datepicker-container {
+      height: 26px;
+      width: $itemWidth;
+
+      .u-form-control.md {
+        height: 26px;
+      }
+
+      .u-form-control {
+        width: 100%;
+      }
+
+      .u-input-group-btn {
+        top: 0;
+      }
+    }
+
+    .bottom-10 {
+      position: relative;
+      bottom: 10px;
+    }
+
+    .calendar-picker {
+      height: 26px;
+      width: $itemWidth;
+
+      .u-form-control.md {
+        height: 26px;
+      }
+
+      .u-form-control {
+        width: 100%;
+      }
+
+      .u-input-group-btn {
+        top: 0;
+      }
+    }
+
+    .u-switch {
+      display: inline-block;
+    }
+  }
+
+  .u-form-item,
+  .u-row>div {
+    padding: 0;
+  }
+
+  .u-search-resident {
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
 }

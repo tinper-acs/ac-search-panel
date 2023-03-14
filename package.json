@@ -1,6 +1,6 @@
 {
   "name": "ac-search-panel",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -89,6 +89,11 @@
     "prop-types": "^15.6.0"
   },
   "dependencies": {
-    "bee-search-panel": "^2.0.14"
+    "babel-runtime": "^6.23.0",
+    "bee-locale": "^0.0.13",
+    "bee-panel": "latest",
+    "classnames": "^2.2.5",
+    "is-instance-of": "^1.0.1",
+    "tinper-bee-core": "latest"
   }
 }
