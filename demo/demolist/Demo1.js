@@ -187,7 +187,7 @@ class Demo extends Component {
                                 </Col>
                                 <Col xs={12} sm={6} md={4}  lg={3}>
                                     <FormItem>
-                                            <Label className='bottom-10'>创建时间</Label>
+                                            <Label>创建时间</Label>
                                             <DatePicker  format = "YYYY-MM-DD"
                                                 {
                                                 ...getFieldProps('time',
@@ -199,7 +199,7 @@ class Demo extends Component {
                                 </Col>
                                 <Col xs={12} sm={6} md={4}  lg={3}>
                                     <FormItem>
-                                            <Label className='bottom-10'>起止日期</Label>
+                                            <Label>起止日期</Label>
                                             <RangePicker  placeholder={'开始 ~ 结束'}
                                                 {
                                                 ...getFieldProps('times',

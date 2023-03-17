@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { Panel } from 'bee-panel';
+import { Collapse } from '@tinper/next-ui';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import { getComponentLocale } from 'bee-locale/build/tool';
 import AdvancedContainer from './AdvancedContainer';
 import HeadContainer from './HeadContainer';
 import i18n from './i18n';
+
+const {Panel} = Collapse
 
 const emFun = () => { };
 
@@ -118,7 +119,10 @@ class SearchPanel extends Component {
 
 
   render() {
-    const local = getComponentLocale(this.props, this.context, 'SearchPanel', () => i18n);
+    let local = i18n
+    if (this.props.locale && this.props.locale.lang && i18n[this.props.locale.lang]) {
+        local = i18n[this.props.locale.lang]
+    }
     let {
       children, clsPrefix, className, resetName, searchName, title, bgColor, style, showOperation,
     } = this.props;
@@ -192,8 +196,5 @@ class SearchPanel extends Component {
 }
 SearchPanel.propTypes = propTypes;
 SearchPanel.defaultProps = defaultProps;
-SearchPanel.contextTypes = {
-  beeLocale: PropTypes.object,
-};
 
 export default SearchPanel;

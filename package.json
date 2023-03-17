@@ -1,6 +1,6 @@
 {
   "name": "ac-search-panel",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -45,7 +45,6 @@
     "bee-datepicker": "^2.0.28",
     "bee-drawer": "0.0.2",
     "bee-layout": "^1.2.7",
-    "bee-panel": "^1.0.0",
     "css-loader": "^1.0.0",
     "eslint": "^5.4.0",
     "eslint-config-airbnb": "^17.1.0",
@@ -89,11 +88,9 @@
     "prop-types": "^15.6.0"
   },
   "dependencies": {
+    "@tinper/next-ui": "^4.4.4",
     "babel-runtime": "^6.23.0",
-    "bee-locale": "^0.0.13",
-    "bee-panel": "latest",
     "classnames": "^2.2.5",
-    "is-instance-of": "^1.0.1",
-    "tinper-bee-core": "latest"
+    "is-instance-of": "^1.0.1"
   }
 }

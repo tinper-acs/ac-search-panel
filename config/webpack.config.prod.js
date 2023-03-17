@@ -1,10 +1,6 @@
-
-
-
 const path = require('path')
 const webpack = require('webpack')
 const webpackMerge = require('webpack-merge')
-const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
@@ -14,7 +10,7 @@ module.exports = webpackMerge(baseConfig, {
   entry: {
       app: path.join(__dirname, '../src/index.js')
   },
-  externals:['react','react-dom','prop-types','tinper-bee'],
+  externals:['react','react-dom','prop-types','@tinper/next-ui'],
   output: {
       filename: 'index.js',
       path: path.join(__dirname, '../dist'),
@@ -104,13 +100,8 @@ module.exports = webpackMerge(baseConfig, {
             'NODE_ENV':  JSON.stringify('production')
           }
       }),
-      // new HtmlWebPackPlugin({
-      //   template: "./src/index.html",
-      //   filename: "./index.html"
-      // }),
       new MiniCssExtractPlugin({
         filename: 'index.css',
       })
   ]
 })
-
